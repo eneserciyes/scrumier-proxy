@@ -61,7 +61,7 @@
 
     <repositories>
         <repository>
-            <id>ogedik.scrumier-commons.snapshots</id>
+            <id>ogedik.commons.snapshots</id>
             <url>https://raw.github.com/orkungdk/scrumier-commons/maven-repo/</url>
             <snapshots>
                 <enabled>true</enabled>
