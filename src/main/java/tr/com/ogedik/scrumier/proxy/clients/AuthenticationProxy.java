@@ -1,4 +1,4 @@
-package authentication;
+package tr.com.ogedik.scrumier.proxy.clients;
 
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.*;
@@ -11,7 +11,7 @@ import tr.com.ogedik.commons.rest.response.AbstractResponse;
  * @author orkungedik
  */
 @FeignClient(name = Services.AUTHENTICATION)
-public interface AuthenticationProxy {
+public interface  AuthenticationProxy {
 
     @PostMapping(Services.AUTHENTICATION + Services.Path.AUTHENTICATE)
     AbstractResponse authenticate(@RequestBody AuthenticationRequest authenticationRequest);
