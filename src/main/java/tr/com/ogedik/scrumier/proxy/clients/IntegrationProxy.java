@@ -11,6 +11,7 @@ import tr.com.ogedik.commons.rest.request.model.sessions.JiraSession;
 import tr.com.ogedik.commons.rest.response.BoardsResponse;
 import tr.com.ogedik.commons.rest.response.SprintResponse;
 import tr.com.ogedik.commons.rest.response.model.JQLSearchResult;
+import tr.com.ogedik.commons.rest.response.model.Sprint;
 
 /** @author orkungedik */
 @FeignClient(name = Services.INTEGRATION)
@@ -47,6 +48,9 @@ public interface IntegrationProxy {
 
   @GetMapping(Services.Path.SPRINTS)
   SprintResponse getSprintsInABoard(@RequestParam String boardId);
+
+  @GetMapping(Services.Path.SPRINT + "/{sprintCode}")
+  Sprint getSprint(@PathVariable(name="sprintCode") String sprintCode);
 
   @GetMapping(Services.Path.ISSUES)
   JQLSearchResult getRecentIssues();
