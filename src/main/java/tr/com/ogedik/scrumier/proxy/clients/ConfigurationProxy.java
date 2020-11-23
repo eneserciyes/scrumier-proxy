@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import tr.com.ogedik.commons.constants.Services;
 import tr.com.ogedik.commons.model.BusinessObject;
 import tr.com.ogedik.commons.rest.request.model.JiraConfigurationProperties;
+import tr.com.ogedik.commons.rest.request.model.MailServerProperties;
 import tr.com.ogedik.commons.rest.response.AbstractResponse;
 
 import java.util.List;
@@ -31,7 +32,7 @@ public interface ConfigurationProxy {
    * @return {@link AbstractResponse} that contains mail server configuration properties
    */
   @GetMapping(Services.Path.MAIL)
-  AbstractResponse getMailServerConfig();
+  MailServerProperties getMailServerConfig();
 
   /**
    * Inserts a property to persistence by key if it is one of the acceptable property key.
