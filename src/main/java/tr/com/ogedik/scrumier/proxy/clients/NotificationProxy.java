@@ -10,5 +10,5 @@ import tr.com.ogedik.commons.rest.request.model.EmailRequest;
 public interface NotificationProxy {
 
     @PostMapping(Services.Path.MAIL)
-    void sendMail(@RequestBody EmailRequest request);
+    Boolean sendMail(@RequestBody EmailRequest request);
 }
